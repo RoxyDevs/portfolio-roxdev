@@ -1,3 +1,46 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "profile-picture",
+      "description": "Foto de perfil de Roxana Rolón, Desarrolladora FullStack",
+      "imageUrl": "https://images.unsplash.com/photo-1609505848912-b7c3b8b4beda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc1OTUyMDY3NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "home-background",
+      "description": "Fondo abstracto de tecnología",
+      "imageUrl": "https://images.unsplash.com/photo-1555680510-34daedadbdb1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMGNvZGV8ZW58MHx8fHwxNzU5NTc3MzIxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract code"
+    },
+    {
+      "id": "project1",
+      "description": "Imagen del proyecto API REST de Gestión de Contactos",
+      "imageUrl": "https://images.unsplash.com/photo-1582569352171-2e9527db0594?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxBUEklMjBjb2RlfGVufDB8fHx8MTc1OTU4NzUzM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "API code"
+    },
+    {
+      "id": "project2",
+      "description": "Imagen del proyecto Sistema de Gestión de Contactos con Pandas",
+      "imageUrl": "https://images.unsplash.com/photo-1584472666879-7d92db132958?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkYXRhJTIwc3ByZWFkc2hlZXR8ZW58MHx8fHwxNzU5NTEyMjY5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "data spreadsheet"
+    },
+    {
+      "id": "project3",
+      "description": "Imagen del proyecto Juego de Memoria con Pygame",
+      "imageUrl": "https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxyZXRybyUyMGdhbWV8ZW58MHx8fHwxNzU5NTAwMDg5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "retro game"
+    },
+    {
+      "id": "project4",
+      "description": "Imagen del proyecto Web Emprendimiento Familiar",
+      "imageUrl": "https://images.unsplash.com/photo-1550071593-fd1bdaf1f93c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxmYW1pbHklMjBidXNpbmVzc3xlbnwwfHx8fDE3NTk1ODc1MzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "family business"
+    },
+    {
+      "id": "map-location",
+      "description": "Mapa de la ubicación de Rosario, Argentina",
+      "imageUrl": "https://images.unsplash.com/photo-1717700299581-c2fc3fad4ee8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjaXR5JTIwbWFwfGVufDB8fHx8MTc1OTQ4MjkxMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "city map"
+    }
+  ]
 }
