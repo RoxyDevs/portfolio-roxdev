@@ -7,6 +7,7 @@ import SupportSection from '@/components/sections/support';
 import ContactSection from '@/components/sections/contact';
 import Footer from '@/components/layout/footer';
 import { AiSection } from '@/components/sections/ai-section';
+import { TiktokSection } from '@/components/sections/tiktok-section';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <SkillsSection />
         <PortfolioSection />
         <AiSection />
+        <TiktokSection />
         <SupportSection />
         <ContactSection />
       </main>

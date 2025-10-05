@@ -8,8 +8,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form';
-import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { MapPin, Smartphone, Mail, Send, Loader2 } from 'lucide-react';
 import { useState } from 'react';
 
@@ -23,7 +21,6 @@ const formSchema = z.object({
 export default function ContactSection() {
     const { toast } = useToast();
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const mapImage = PlaceHolderImages.find(p => p.id === 'map-location');
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
@@ -90,9 +87,17 @@ export default function ContactSection() {
                         </Form>
                     </div>
                     <div className="space-y-8">
-                        {mapImage && (
-                            <Image src={mapImage.imageUrl} alt={mapImage.description} width={600} height={400} className="rounded-lg w-full" data-ai-hint={mapImage.imageHint}/>
-                        )}
+                        <div className="aspect-[16/9] rounded-lg overflow-hidden">
+                           <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107149.07172019748!2d-60.70119859341427!3d-32.9521895856417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b6539335d3d5d3%3A0x45ea3b3b2553c3e6!2sRosario%2C%20Santa%20Fe!5e0!3m2!1ses!2sar!4v1700000000000"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen={true}
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                        </div>
                         <div className="bg-card p-8 rounded-lg space-y-4">
                              <div className="flex items-center gap-4">
                                 <MapPin className="h-6 w-6 text-accent"/>
