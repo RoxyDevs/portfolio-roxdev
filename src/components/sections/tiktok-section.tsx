@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 
 export function TiktokSection() {
@@ -15,6 +18,18 @@ export function TiktokSection() {
             "data-video-id": "7422422701656132870",
         },
     ];
+
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.src = "https://www.tiktok.com/embed.js";
+        script.async = true;
+        document.body.appendChild(script);
+
+        return () => {
+            document.body.removeChild(script);
+        };
+    }, []);
+
 
     return (
         <section id="tiktok" className="py-20 bg-background">
