@@ -2,7 +2,7 @@
 
 Este es el repositorio del portfolio personal de Roxana Rolón (RoxDev), una Desarrolladora FullStack especializada en Python, tecnologías emergentes e Inteligencia Artificial. Este proyecto fue construido con Next.js y estilizado con Tailwind CSS y ShadCN UI.
 
-[![RoxDev Portfolio Screenshot](https://picsum.photos/seed/roxdev-og/1200/630)](https://roxdev.com) <!-- Reemplazar con el dominio final -->
+![RoxDev Portfolio Screenshot](https://picsum.photos/seed/roxdev-og/1200/630)
 
 ## ✨ Características Principales
 
