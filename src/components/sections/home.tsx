@@ -1,23 +1,18 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Github, Linkedin, Mail } from 'lucide-react';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function HomeSection() {
-  const backgroundImage = PlaceHolderImages.find(p => p.id === 'home-background');
-
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center text-center text-white py-20">
-      {backgroundImage && (
-        <Image
-          src={backgroundImage.imageUrl}
-          alt={backgroundImage.description}
-          fill
-          className="object-cover -z-20"
-          priority
-          data-ai-hint={backgroundImage.imageHint}
-        />
-      )}
+      <Image
+        src="https://images.unsplash.com/photo-1555680510-34daedadbdb1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMGNvZGV8ZW58MHx8fHwxNzU5NTc3MzIxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+        alt="Fondo abstracto de tecnología"
+        fill
+        className="object-cover -z-20"
+        priority
+        data-ai-hint="abstract code"
+      />
       <div className="absolute inset-0 bg-background/90 -z-10"></div>
       
       <div className="container mx-auto px-4">
