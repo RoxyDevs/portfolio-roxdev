@@ -4,7 +4,6 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function HomeSection() {
-  const profileImage = PlaceHolderImages.find(p => p.id === 'profile-picture');
   const backgroundImage = PlaceHolderImages.find(p => p.id === 'home-background');
 
   return (
@@ -23,16 +22,14 @@ export default function HomeSection() {
       
       <div className="container mx-auto px-4">
         <div className="bg-card/70 backdrop-blur-sm p-8 md:p-10 rounded-3xl max-w-lg mx-auto border border-border/50 shadow-2xl">
-          {profileImage && (
-            <Image
-              src={profileImage.imageUrl}
-              alt={profileImage.description}
+          <Image
+              src="/profile-roxana.jpg"
+              alt="Foto de perfil de Roxana Rolón, Desarrolladora FullStack"
               width={150}
               height={150}
               className="rounded-full mx-auto mb-6 border-4 border-primary object-cover"
-              data-ai-hint={profileImage.imageHint}
+              data-ai-hint="woman portrait red hair"
             />
-          )}
           <h1 className="font-headline text-4xl md:text-5xl font-bold text-foreground">Roxana Rolón</h1>
           <h2 className="mt-2 text-xl text-foreground/80">Desarrolladora FullStack | Especialista en Python</h2>
           
