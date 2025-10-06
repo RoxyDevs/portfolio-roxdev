@@ -29,6 +29,7 @@ export default function HomeSection() {
               height={150}
               className="rounded-full mx-auto mb-6 border-4 border-primary object-cover"
               data-ai-hint="woman portrait red hair"
+              unoptimized={true}
             />
           <h1 className="font-headline text-4xl md:text-5xl font-bold text-foreground">Roxana Rolón</h1>
           <h2 className="mt-2 text-xl text-foreground/80">Desarrolladora FullStack | Especialista en Python</h2>
