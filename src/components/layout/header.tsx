@@ -20,8 +20,8 @@ export default function Header() {
   return (
     <div className="bg-background/80 backdrop-blur-sm sticky top-0 z-50 border-b border-border">
       <header className="container mx-auto flex justify-between items-center p-4">
-        <a href="#home" className="font-headline text-3xl font-bold text-primary">
-          ROXDEV
+        <a href="#home" className="font-headline text-3xl font-bold">
+          <span className="text-primary">ROX</span><span className="text-accent">DEV</span>
         </a>
         <nav className="hidden md:flex items-center space-x-6">
           {navLinks.map((link) => (
@@ -41,8 +41,8 @@ export default function Header() {
             <SheetContent side="right" className="bg-background p-0 w-[250px]">
               <div className="flex flex-col h-full">
                 <div className="p-4 flex justify-between items-center border-b">
-                   <a href="#home" className="font-headline text-2xl font-bold text-primary" onClick={() => setIsMobileMenuOpen(false)}>
-                      ROXDEV
+                   <a href="#home" className="font-headline text-2xl font-bold" onClick={() => setIsMobileMenuOpen(false)}>
+                      <span className="text-primary">ROX</span><span className="text-accent">DEV</span>
                     </a>
                   <SheetClose asChild>
                     <Button variant="ghost" size="icon">
