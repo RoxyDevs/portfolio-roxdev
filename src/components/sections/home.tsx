@@ -18,7 +18,7 @@ export default function HomeSection() {
       <div className="container mx-auto px-4">
         <div className="bg-card/70 backdrop-blur-sm p-8 md:p-10 rounded-3xl max-w-lg mx-auto border border-border/50 shadow-2xl">
           <Image
-              src="/profile-roxana.jpg"
+              src="/profile-roxana.png"
               alt="Foto de perfil de Roxana Rolón, Desarrolladora FullStack"
               width={150}
               height={150}
