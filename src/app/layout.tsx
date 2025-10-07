@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
+import MusicPlayer from '@/components/layout/music-player';
 
 const title = 'RoxDev | Roxana Rolón - Desarrolladora FullStack Python en Rosario';
 const description = 'Portfolio de Roxana Rolón (RoxDev), desarrolladora FullStack con 4 años de experiencia, especializada en Python, FastAPI, y tecnologías emergentes. Descubre mis proyectos y habilidades.';
@@ -29,16 +30,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased">
-        <iframe 
-            width="0" 
-            height="0" 
-            src="https://www.youtube.com/embed/WRRnqqQZcjA?autoplay=1&loop=1&playlist=WRRnqqQZcjA&si=tATFKQXd_HHz3IWj" 
-            title="YouTube video player" 
-            frameBorder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowFullScreen
-            style={{ display: 'none' }}
-        ></iframe>
+        <MusicPlayer />
         {children}
         <Toaster />
       </body>
