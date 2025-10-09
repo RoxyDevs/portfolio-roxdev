@@ -44,7 +44,7 @@ export default function MusicPlayer() {
             <div style={{ display: 'none' }}>
                 {hasWindow && (
                     <ReactPlayer
-                        url="https://www.youtube.com/watch?v=WRRnqqQZcjA"
+                        url="https://www.youtube.com/watch?v=4xDzrJKXOOY"
                         playing={isPlaying}
                         loop={true}
                         volume={0.5}
