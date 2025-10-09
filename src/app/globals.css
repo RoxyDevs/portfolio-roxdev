@@ -6,6 +6,13 @@
   html {
     @apply scroll-smooth;
   }
+  .custom-cursor-container {
+    cursor: none;
+  }
+  .custom-cursor-container a,
+  .custom-cursor-container button {
+    cursor: none;
+  }
 }
 
 @layer base {

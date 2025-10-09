@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import MusicPlayer from '@/components/layout/music-player';
+import CustomCursor from '@/components/layout/custom-cursor';
 
 const title = 'RoxDev | Roxana Rolón - Desarrolladora FullStack Python en Rosario';
 const description = 'Portfolio de Roxana Rolón (RoxDev), desarrolladora FullStack con 4 años de experiencia, especializada en Python, FastAPI, y tecnologías emergentes. Descubre mis proyectos y habilidades.';
@@ -29,7 +30,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
       </head>
-      <body className="font-body antialiased">
+      <body className="font-body antialiased custom-cursor-container">
+        <CustomCursor />
         <MusicPlayer />
         {children}
         <Toaster />
