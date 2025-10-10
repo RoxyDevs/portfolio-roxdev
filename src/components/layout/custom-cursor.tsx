@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { cn } from '@/lib/utils';
 
 // Component for a single "glitter" particle
@@ -43,29 +43,28 @@ export default function CustomCursor() {
   const [isHovering, setIsHovering] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [glitters, setGlitters] = useState<{ x: number, y: number, id: number, isFading: boolean }[]>([]);
+  const glitterCleanUpTimers = useRef<NodeJS.Timeout[]>([]);
 
   // Update cursor position
   const handleMouseMove = useCallback((e: MouseEvent) => {
     setPosition({ x: e.clientX, y: e.clientY });
     if (!isVisible) setIsVisible(true);
 
-    // Add new glitter particle
     const newGlitter = { x: e.clientX, y: e.clientY, id: Date.now(), isFading: false };
-    setGlitters(prev => [newGlitter, ...prev].slice(0, 20)); // Keep only last 20
+    setGlitters(prev => [newGlitter, ...prev].slice(0, 20)); 
 
-    // Set particle to fade after a delay
-    setTimeout(() => {
+    const fadeTimer = setTimeout(() => {
         setGlitters(prev => prev.map(g => g.id === newGlitter.id ? {...g, isFading: true} : g));
     }, 100);
 
-    // Clean up old faded particles
-     setTimeout(() => {
-        setGlitters(prev => prev.filter(g => !g.isFading || g.id > Date.now() - 2000));
+    const cleanUpTimer = setTimeout(() => {
+        setGlitters(prev => prev.filter(g => g.id !== newGlitter.id));
     }, 1100);
+
+    glitterCleanUpTimers.current.push(fadeTimer, cleanUpTimer);
 
   }, [isVisible]);
 
-  // Detect hover over interactive elements
   const handleMouseOver = useCallback((e: MouseEvent) => {
     if ((e.target instanceof HTMLElement) && e.target.closest('a, button')) {
       setIsHovering(true);
@@ -92,15 +91,14 @@ export default function CustomCursor() {
       document.removeEventListener('mouseout', handleMouseOut);
       document.body.removeEventListener('mouseleave', () => setIsVisible(false));
       document.body.removeEventListener('mouseenter', () => setIsVisible(true));
+      // Clear all scheduled timers on component unmount
+      glitterCleanUpTimers.current.forEach(timer => clearTimeout(timer));
     };
   }, [handleMouseMove, handleMouseOver, handleMouseOut]);
 
   return (
     <div className={cn("hidden md:block pointer-events-none fixed inset-0 z-[9999] transition-opacity duration-300", isVisible ? 'opacity-100' : 'opacity-0')}>
-      {/* Glitter trail */}
       {glitters.map(g => <Glitter key={g.id} x={g.x} y={g.y} isFading={g.isFading} />)}
-
-      {/* Main cursor element */}
       <div
         className="absolute transition-transform duration-300 ease-out"
         style={{

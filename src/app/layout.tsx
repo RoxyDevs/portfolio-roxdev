@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
+import { Playfair_Display, PT_Sans } from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import MusicPlayer from '@/components/layout/music-player';
 import CustomCursor from '@/components/layout/custom-cursor';
+import { cn } from '@/lib/utils';
+
+const ptSans = PT_Sans({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-pt-sans',
+});
+
+const playfairDisplay = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-playfair-display',
+});
 
 const title = 'RoxDev | Roxana Rolón - Desarrolladora FullStack Python en Rosario';
 const description = 'Portfolio de Roxana Rolón (RoxDev), desarrolladora FullStack con 4 años de experiencia, especializada en Python, FastAPI, y tecnologías emergentes. Descubre mis proyectos y habilidades.';
@@ -25,12 +39,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="dark">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
-      </head>
-      <body className="font-body antialiased custom-cursor-container">
+      <body className={cn(
+        "font-body antialiased custom-cursor-container",
+        ptSans.variable,
+        playfairDisplay.variable
+      )}>
         <CustomCursor />
         <MusicPlayer />
         {children}
