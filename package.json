@@ -6,7 +6,7 @@
     "dev": "next dev --turbopack --port 9002",
     "genkit:dev": "genkit start -- tsx src/ai/dev.ts",
     "genkit:watch": "genkit start -- tsx --watch src/ai/dev.ts",
-    "build": "genkit-cli build -o genkit-output && next build",
+    "build": "NODE_ENV=production genkit-cli build -o genkit-output && next build",
     "start": "next start -p 8080",
     "lint": "next lint",
     "typecheck": "tsc --noEmit"
@@ -46,7 +46,6 @@
     "genkit-cli": "^1.20.0",
     "lucide-react": "^0.475.0",
     "next": "15.3.3",
-    "patch-package": "^8.0.0",
     "react": "^18.3.1",
     "react-day-picker": "^8.10.1",
     "react-dom": "^18.3.1",
